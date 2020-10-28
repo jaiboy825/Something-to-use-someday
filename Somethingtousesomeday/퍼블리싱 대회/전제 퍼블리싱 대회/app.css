@@ -1,0 +1,975 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes ma {
+    0% {
+        margin-top: 0px;
+    }
+    50% {
+        margin-top: 20px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@keyframes ib {
+    0% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+    50% {
+        opacity: 0.6;
+        margin-top: -10px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@font-face {
+    font-family: 'ds_main_font';
+    src: url(belisa-webfont.eot);
+    src: url(belisa-webfont.eot?#iefix) format('embedded-opentype'), url(belisa-webfont.woff) format('woff'), url(belisa-webfont.ttf) format('truetype'), url(belisa-webfont.svg#belisa_plumilla_manualregular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ds_sans_font';
+    src: url(moon_flower-webfont.eot);
+    src: url(moon_flower-webfont.eot?#iefix) format('embedded-opentype'), url(moon_flower-webfont.woff);
+}
+
+@media(min-width: 1070px) {
+    #mom {
+        display: none;
+    }
+    header {
+        overflow: hidden;
+        width: 100%;
+        height: 150px;
+        position: relative;
+    }
+    .topHead {
+        width: 100%;
+        height: 70px;
+        background-color: #191817;
+    }
+    .moBtn {
+        display: none;
+    }
+    .thin {
+        padding-top: 20px;
+        width: 80%;
+        margin: 0 auto;
+        max-height: 70px;
+        display: flex;
+    }
+    .thin>img {
+        cursor: pointer;
+        width: 70px;
+        height: 40px;
+        transition: 0.4s;
+    }
+    .thin>img:hover {
+        opacity: 0.8;
+    }
+    .dslogoContainer {
+        padding-top: 20px;
+        width: 100px;
+        margin-left: 10%;
+    }
+    .dslogo2 {
+        width: 100px;
+        height: 50px;
+    }
+    .menu {
+        margin-left: 30px;
+        width: 370px;
+        display: grid;
+        line-height: 30px;
+        text-align: center;
+        grid-template-columns: 70px 70px 70px 70px 70px;
+    }
+    .dsmore {
+        margin-top: 30px;
+        margin-left: 30px;
+        width: 370px;
+        display: grid;
+        line-height: 30px;
+        text-align: center;
+        grid-template-columns: 100px 150px 150px;
+    }
+    .menus {
+        transition: 0.5s;
+        cursor: pointer;
+        color: #767675;
+    }
+    .menus:hover {
+        color: #eee;
+    }
+    .shop {
+        cursor: pointer;
+        width: 130px;
+        height: 30px;
+        line-height: 30px;
+        border: 2px solid #db4411;
+        background-color: #db4411;
+        border-radius: 3px;
+        text-align: center;
+        color: #fff;
+        transition: 0.4s;
+    }
+    .shop:hover {
+        background-color: #191817;
+    }
+    .headerImg {
+        width: 100%;
+        height: 10px;
+        position: absolute;
+    }
+    .bottomHead {
+        width: 100%;
+        height: 80px;
+        background-color: #3d3d3d;
+        display: flex;
+    }
+    .mainContainer {
+        width: 100%;
+        height: 4000px;
+        background-image: url(img/background.png);
+    }
+    .main {
+        width: 100%;
+        height: 750px;
+    }
+    .mainImg {
+        z-index: 1;
+        width: 100%;
+        height: 750px;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+    }
+    .mainInfo {
+        position: relative;
+        width: 50%;
+        margin: -650px auto;
+        z-index: 7;
+    }
+    .mi {
+        width: 50%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 400px;
+        row-gap: 30px;
+        justify-content: center;
+    }
+    .dsLogo {
+        width: 400px;
+    }
+    .dsgif {
+        margin: 0 auto;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .dsgif:hover {
+        opacity: 0.8;
+    }
+    .mim {
+        height: 100px;
+        margin: 0 auto;
+        font: 16px Hind, Tahoma, sans-serif;
+        color: white;
+    }
+    .buy {
+        border: 2px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 160px;
+        height: 50px;
+        font: 16px Hind, Tahoma, sans-serif;
+        font-weight: bold;
+        line-height: 50px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        color: black;
+        background-color: white;
+        transition: 0.4s;
+    }
+    .buy:hover {
+        border: 2px solid white;
+        color: white;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .mainManImg {
+        min-width: 300px;
+        max-width: none;
+        height: 600px;
+        margin: 150px -90%;
+        position: absolute;
+        z-index: 4;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        transition: 1s;
+    }
+    .mainMonImg {
+        min-width: 100%;
+        max-width: none;
+        height: 100%;
+        margin: 0 -100%;
+        position: absolute;
+        z-index: 3;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        transition: 1s;
+        animation: 3s ma ease-in-out infinite;
+    }
+    .mainBackImg {
+        min-width: 100%;
+        max-width: none;
+        height: 100%;
+        margin: 0 -100%;
+    }
+    .about {
+        padding-top: 50px;
+        width: 80%;
+        margin: 0 auto;
+        height: 1350px;
+    }
+    .shipImg {
+        cursor: pointer;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .aboutHead {
+        position: relative;
+        max-width: 1050px;
+        max-height: 300px;
+        margin: 0 auto;
+    }
+    .aboutInfo {
+        position: relative;
+        max-width: 1050px;
+        min-height: 1000px;
+        margin: 0 auto;
+        margin-top: 50px;
+        display: flex;
+    }
+    .dsInfo {
+        width: 500px;
+        height: 100%;
+    }
+    .dsInfo>p {
+        font: 16px Hind, Tahoma, sans-serif;
+        color: #c4c4c4;
+    }
+    .dsInfo>h2 {
+        font-family: ds_Sans_font;
+        font-size: 44px;
+        font-weight: bold;
+        color: #feffa4;
+    }
+    .dsInfo>h3 {
+        font-family: ds_Sans_font;
+        font-size: 24px;
+        font-weight: bold;
+        color: #feffa4;
+    }
+    .dsInfo>p>strong {
+        color: #e4b16e;
+    }
+    .dsInfoImg {
+        margin-left: 50px;
+        width: 500px;
+        transition: 0.5s;
+        animation: 3s ib ease-in-out infinite;
+    }
+    .dsInfoImg>img {
+        max-width: 500px;
+    }
+    .gallary {
+        width: 100%;
+        height: 900px;
+        background-color: black;
+        padding-top: 50px;
+    }
+    .gallaryMain {
+        position: relative;
+        max-width: 1100px;
+        height: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 250px 250px 250px 250px;
+        grid-template-rows: 250px 250px 250px;
+        row-gap: 30px;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .dsimgs {
+        cursor: pointer;
+        width: 250px;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transition: 0.4s;
+    }
+    .dsimgs:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
+    .dsimgMore {
+        width: 100%;
+        height: 100%;
+        border: 3px solid white;
+        font-family: ds_Sans_font;
+        font-size: 48px;
+        font-weight: bold;
+        background-color: black;
+        color: white;
+        text-align: center;
+        line-height: 250px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .dsimgMore:hover {
+        background-color: #a55c1e;
+        color: black;
+    }
+    .dsPlat {
+        width: 100%;
+        height: 450px;
+        background-image: url(img/background2.png);
+    }
+    .dsAllContainer {
+        width: 900px;
+        margin: 0 auto;
+        display: flex;
+    }
+    .sliderContainer {
+        width: 500px;
+    }
+    .dsPlatInfo {
+        width: 400px;
+        height: 450px;
+    }
+    .dsPlatInfo>h2 {
+        margin-top: 20px;
+        font-family: ds_Sans_font;
+        font-size: 44px;
+        font-weight: bold;
+        color: #feffa4;
+    }
+    .dsPlatInfo>h3 {
+        margin-top: 20px;
+        font-family: ds_Sans_font;
+        font-size: 44px;
+        font-weight: bold;
+        color: #feffa4;
+    }
+    .dsPlatInfo>p {
+        font: 20px Hind, Tahoma, sans-serif;
+        color: #c4c4c4;
+    }
+    .dsLast {
+        position: relative;
+        overflow: hidden !important;
+        width: 100%;
+        height: 350px;
+    }
+    .dsHead {
+        width: 100%;
+        height: 150px;
+    }
+    .dsRed {
+        width: 100%;
+        height: 200px;
+        background-image: url(img/orange.png);
+    }
+    .drContainer {
+        width: 900px;
+        margin: 0 auto;
+        display: flex;
+    }
+    .dsLastLong1 {
+        position: absolute;
+        min-width: 100%;
+        max-width: none;
+        min-height: 10px;
+    }
+    .dsLastLong2 {
+        margin-top: -10px;
+        position: absolute;
+        min-width: 100%;
+        max-width: none;
+        min-height: 10px;
+    }
+    .dsPeople {
+        width: 350px;
+    }
+    .dsRedContainer {
+        width: 550px;
+        display: flex;
+    }
+    .dsLastInfo {
+        width: 400px;
+        height: 150px;
+        padding-top: 50px;
+    }
+    .dsLastInfo>h2 {
+        font: 32px Hind, Tahoma, sans-serif;
+        color: white;
+    }
+    .dsLastInfo>p {
+        margin-top: 20px;
+        font: 18px Hind, Tahoma, sans-serif;
+        color: white;
+    }
+    .dlbContainer {
+        width: 150px;
+        height: 130px;
+        padding-top: 70px;
+    }
+    .dlb {
+        cursor: pointer;
+        width: 150px;
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 3px;
+        font: 18px Hind, Tahoma, sans-serif;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        transition: 0.4s;
+    }
+    .dlb:hover {
+        background-color: white;
+        color: black;
+    }
+    footer {
+        width: 100%;
+        height: 150px;
+        background-color: #181716;
+    }
+    .footer {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+    }
+    .footerLogo {
+        width: 50px;
+        height: 75px;
+    }
+    .footerInfo {
+        margin-left: auto;
+        width: calc(80% - 50px);
+    }
+    .fi1 {
+        margin-left: auto;
+        text-align: center;
+        margin-top: 20px;
+        width: 60%;
+        height: 40px;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+    }
+    .fi2 {
+        text-align: right;
+        color: #41403f;
+    }
+    .fi3 {
+        color: #41403f;
+        margin-top: 10px;
+        text-align: right;
+    }
+    .fi3>strong {
+        cursor: pointer;
+        font-family: ds_Sans_font;
+        font-size: 34px;
+        font-weight: bold;
+        color: #feffa4;
+    }
+    .jc-animation>img {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .jc-animation {
+        display: flex;
+    }
+}
+
+/* 여기부터 모바일 */
+
+@media(max-width:1069px) {
+    .moBtn {
+        cursor: pointer;
+        margin-left: auto;
+        width: 70px;
+        height: 70px;
+    }
+    #mom {
+        position: fixed;
+        z-index: 20;
+        right: -50%;
+        width: 50%;
+        height: 300px;
+        background-image: url(img/background.png);
+        transition: 0.4s;
+    }
+    .moBtn:hover #mom {
+        right: 0;
+    }
+    .moHead {
+        font-family: ds_Sans_font;
+        font-size: 44px;
+        font-weight: bold;
+        color: #feffa4;
+        text-align: center;
+        height: 55px;
+    }
+    .moMenu {
+        border-bottom: 2px solid #feffa4;
+        cursor: pointer;
+        width: calc(100% - 20px);
+        padding-left: 20px;
+        height: 80px;
+        font: 18px Hind, Tahoma, sans-serif;
+        color: white;
+        line-height: 80px;
+        transition: 0.3s;
+    }
+    .moMenu:hover {
+        color: #feffa4;
+    }
+    .moBtn>img {
+        width: 70px;
+    }
+    header {
+        overflow: hidden;
+        width: 100%;
+        height: 70px;
+        position: relative;
+        position: fixed;
+        z-index: 30;
+    }
+    .topHead {
+        width: 100%;
+        height: 70px;
+        background-color: #191817;
+    }
+    .thin {
+        width: 80%;
+        margin: 0 auto;
+        max-height: 70px;
+        display: flex;
+    }
+    .thin>img {
+        margin-top: 20px;
+        cursor: pointer;
+        width: 70px;
+        height: 40px;
+        transition: 0.4s;
+    }
+    .thin>img:hover {
+        opacity: 0.8;
+    }
+    .menu {
+        display: none;
+    }
+    .menus {
+        transition: 0.5s;
+        cursor: pointer;
+        color: #767675;
+    }
+    .menus:hover {
+        color: #eee;
+    }
+    .shop {
+        display: none;
+    }
+    .shop:hover {
+        background-color: #191817;
+    }
+    .headerImg {
+        margin-top: 70px;
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        z-index: 8;
+    }
+    .bottomHead {
+        display: none;
+    }
+    .mainContainer {
+        width: 100%;
+        height: 100%;
+        background-image: url(img/background.png);
+    }
+    .main {
+        width: 100%;
+        height: 750px;
+    }
+    .mainImg {
+        z-index: 1;
+        width: 100%;
+        height: 750px;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+    }
+    .mainInfo {
+        position: relative;
+        width: 50%;
+        margin: -650px auto;
+        z-index: 7;
+    }
+    .mi {
+        width: 50%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 400px;
+        row-gap: 30px;
+        justify-content: center;
+    }
+    .dsLogo {
+        width: 400px;
+    }
+    .dsgif {
+        margin: 0 auto;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .dsgif:hover {
+        opacity: 0.8;
+    }
+    .mim {
+        height: 100px;
+        margin: 0 auto;
+        font: 16px Hind, Tahoma, sans-serif;
+        color: white;
+    }
+    .buy {
+        border: 2px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 160px;
+        height: 50px;
+        font: 16px Hind, Tahoma, sans-serif;
+        font-weight: bold;
+        line-height: 50px;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        color: black;
+        background-color: white;
+        transition: 0.4s;
+    }
+    .buy:hover {
+        border: 2px solid white;
+        color: white;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .mainManImg {
+        min-width: 300px;
+        max-width: none;
+        height: 600px;
+        margin: 150px -90%;
+        position: absolute;
+        z-index: 4;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        transition: 1s;
+    }
+    .mainMonImg {
+        min-width: 100%;
+        max-width: none;
+        height: 100%;
+        margin: 0 -100%;
+        position: absolute;
+        z-index: 3;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        transition: 1s;
+        animation: 3s ma ease-in-out infinite;
+    }
+    .mainBackImg {
+        min-width: 100%;
+        max-width: none;
+        height: 100%;
+        margin: 0 -100%;
+    }
+    .about {
+        padding-top: 50px;
+        width: 80%;
+        margin: 0 auto;
+        height: 1300px;
+    }
+    .shipImg {
+        cursor: pointer;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .aboutHead {
+        position: relative;
+        max-width: 1050px;
+        max-height: 300px;
+        margin: 0 auto;
+    }
+    .aboutInfo {
+        position: relative;
+        max-width: 1050px;
+        height: 2000px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .dsInfo {
+        margin: 0 auto;
+        width: 100% !important;
+        height: 1100px;
+    }
+    .dsInfo>p {
+        font: 16px Hind, Tahoma, sans-serif;
+        color: #c4c4c4;
+    }
+    .dsInfo>h2 {
+        font-family: ds_Sans_font;
+        font-size: 44px;
+        font-weight: bold;
+        color: #feffa4;
+    }
+    .dsInfo>h3 {
+        font-family: ds_Sans_font;
+        font-size: 24px;
+        font-weight: bold;
+        color: #feffa4;
+    }
+    .dsInfo>img {
+        max-width: 100%;
+    }
+    .dsInfo>p>strong {
+        color: #e4b16e;
+    }
+    .dsInfoImg {
+        display: none;
+    }
+    .gallary {
+        width: 100%;
+        height: 1300px;
+        background-color: black;
+        padding-top: 50px;
+    }
+    .gallaryMain {
+        position: relative;
+        max-width: 80%;
+        height: 80%;
+        margin: 0 auto;
+        row-gap: 30px;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .dsimgs {
+        cursor: pointer;
+        max-width: 180px;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        transition: 0.4s;
+    }
+    .dsimgs:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
+    .dsimgMore {
+        width: 180px;
+        height: 180px;
+        border: 3px solid white;
+        font-family: ds_Sans_font;
+        font-size: 48px;
+        font-weight: bold;
+        background-color: black;
+        color: white;
+        text-align: center;
+        line-height: 180px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .dsimgMore:hover {
+        background-color: #a55c1e;
+        color: black;
+    }
+    .dsPlat {
+        width: 100%;
+        height: 800px;
+        background-image: url(img/background2.png);
+    }
+    .dsAllContainer {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .sliderContainer {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .dsPlatInfo {
+        width: 400px;
+        height: 450px;
+        margin: 0 auto;
+    }
+    .dsPlatInfo>h2 {
+        margin-top: 20px;
+        font-family: ds_Sans_font;
+        font-size: 44px;
+        font-weight: bold;
+        color: #feffa4;
+    }
+    .dsPlatInfo>h3 {
+        margin-top: 20px;
+        font-family: ds_Sans_font;
+        font-size: 44px;
+        font-weight: bold;
+        color: #feffa4;
+    }
+    .dsPlatInfo>p {
+        font: 20px Hind, Tahoma, sans-serif;
+        color: #c4c4c4;
+    }
+    .dsLast {
+        position: relative;
+        overflow: hidden !important;
+        width: 100%;
+        height: 270px;
+    }
+    .dsHead {
+        display: none;
+    }
+    .dsRed {
+        width: 100%;
+        height: 270px;
+        background-image: url(img/orange.png);
+    }
+    .drContainer {
+        width: 900px;
+        margin: 0 auto;
+        display: flex;
+    }
+    .dsLastLong1 {
+        position: absolute;
+        min-width: 100%;
+        max-width: none;
+        min-height: 10px;
+    }
+    .dsLastLong2 {
+        margin-top: -10px;
+        position: absolute;
+        min-width: 100%;
+        max-width: none;
+        min-height: 10px;
+    }
+    .dsPeople {
+        display: none;
+    }
+    .dsRedContainer {
+        width: 100%;
+        height: 200px;
+    }
+    .dsLastInfo {
+        padding: 0 5%;
+        width: 90%;
+        height: 100px;
+        padding-top: 50px;
+    }
+    .dsLastInfo>h2 {
+        font: 32px Hind, Tahoma, sans-serif;
+        color: white;
+    }
+    .dsLastInfo>p {
+        margin-top: 20px;
+        font: 18px Hind, Tahoma, sans-serif;
+        color: white;
+    }
+    .dlbContainer {
+        margin-left: 5%;
+        width: 150px;
+        height: 100px;
+        padding-top: 30px;
+    }
+    .dlb {
+        cursor: pointer;
+        width: 150px;
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 3px;
+        font: 18px Hind, Tahoma, sans-serif;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        transition: 0.4s;
+    }
+    .dlb:hover {
+        background-color: white;
+        color: black;
+    }
+    footer {
+        width: 100%;
+        height: 150px;
+        background-color: #181716;
+    }
+    .footer {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+    }
+    .footerLogo {
+        width: 50px;
+        height: 75px;
+    }
+    .footerInfo {
+        margin-left: auto;
+        width: calc(80% - 50px);
+    }
+    .fi1 {
+        display: none;
+    }
+    .fi2 {
+        text-align: right;
+        color: #41403f;
+    }
+    .fi3 {
+        color: #41403f;
+        margin-top: 10px;
+        text-align: right;
+    }
+    .fi3>strong {
+        cursor: pointer;
+        font-family: ds_Sans_font;
+        font-size: 34px;
+        font-weight: bold;
+        color: #feffa4;
+    }
+    .jc-animation>img {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .jc-animation {
+        display: flex;
+    }
+}

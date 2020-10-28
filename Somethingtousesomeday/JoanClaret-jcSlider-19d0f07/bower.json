@@ -1,0 +1,35 @@
+{
+  "name": "jcSlider",
+  "version": "1.2.7",
+  "homepage": "https://github.com/JoanClaret/jcSlider",
+  "authors": [
+    "Joan Claret <dpam23@gmail.com>"
+  ],
+  "description": "A responsive slider jQuery plugin with CSS animations from animate.css",
+  "main": "jquery.jcslider.js",
+  "dependencies": {
+    "jquery": ">=1.4.0",
+    "animate.css": "^3.2.5"
+  },
+  "keywords": [
+    "slider",
+    "css",
+    "css3",
+    "responsive",
+    "testimonials",
+    "animations",
+    "animate",
+    "jQuery",
+    "plugin",
+    "jquery-plugin",
+    "ecosystem:jquery"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

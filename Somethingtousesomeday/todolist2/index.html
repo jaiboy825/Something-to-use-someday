@@ -1,0 +1,40 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="todoapp">
+    <header class="header">
+      <h1>todo list</h1>
+      <input id="newTodo" class="new-todo" placeholder="What needs to be done?">
+    </header>
+    <section id="main">
+      <input id="toggleInputAll" class="toggle-all" type="checkbox">
+      <label for="toggle-all">Mark all as complete</label>
+      <ul id="todoListView" class="todo-list"></ul>
+    </section>
+    <footer class="footer">
+      <span class="todo-count"><strong id="todoCount">0</strong> item left</span>
+      <ul class="filters">
+        <li>
+          <a class="selected" id="allWorks" onclick="changeClass(this)" href="#/">All</a>
+        </li>
+        <li>
+          <a href="#active" id="activedItems" onclick="changeClass(this)">Active</a>
+        </li>
+        <li>
+          <a href="#completed" id="completedTodos" onclick="changeClass(this)">Completed</a>
+        </li>
+      </ul>
+      <button class="clear-completed" id="btnClear">Clear completed</button>
+    </footer>
+  </section>
+
+  <script src="todo-list.js"></script>
+</body>
+
+</html>
